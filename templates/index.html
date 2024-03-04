@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepsis Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>Sepsis Risk Prediction</h1>
+    <form id="sepsisForm" action="/predict" method="post">
+        <label for="HR_mean">Heart Rate (bpm):</label>
+        <input type="number" id="HR_mean" name="HR_mean" step="any" required><br>
+
+        <label for="O2Sat_mean">Oxygen Saturation (%):</label>
+        <input type="number" id="O2Sat_mean" name="O2Sat_mean" step="any" required><br>
+
+        <label for="Hgb_mean">Oxygen Saturation (%):</label>
+        <input type="number" id="Hgb_mean" name="Hgb_mean" step="any" required><br>
+
+        <label for="Temp_mean">Temperature:</label>
+        <input type="number" id="Temp_mean" name="Temp_mean" step="any" required><br>
+
+        <label for="MAP_mean"> MAP_mean:</label>
+        <input type="number" id="MAP_mean" name="MAP_mean" step="any" required><br>
+
+        <label for="Resp_mean"> Resp_mean:</label>
+        <input type="number" id="Resp_mean" name="Resp_mean" step="any" required><br>
+
+        <label for="FiO2_mean"> FiO2_mean:</label>
+        <input type="number" id="FiO2_mean" name="FiO2_mean" step="any" required><br>
+
+        <label for="SaO2_mean"> SaO2_mean:</label>
+        <input type="number" id="SaO2_mean" name="SaO2_mean" step="any" required><br>
+
+        <label for="AST_mean"> AST_mean:</label>
+        <input type="number" id="AST_mean" name="AST_mean" step="any" required><br>
+
+        <label for="BUN_mean"> BUN_mean:</label>
+        <input type="number" id="BUN_mean" name="BUN_mean" step="any" required>
+
+        <label for="Creatinine_mean"> Creatinine_mean:</label>
+        <input type="number" id="Creatinine_mean" name="Creatinine_mean" step="any" required><br>
+
+        <label for="Glucose_mean"> Glucose_mean:</label>
+        <input type="number" id="Glucose_mean" name="Glucose_mean" step="any" required><br>
+
+        <label for="WBC_mean"> WBC_mean:</label>
+        <input type="number" id="WBC_mean" name="WBC_mean" step="any" required><br>
+
+        <label for="Platelets_mean"> Platelets_mean:</label>
+        <input type="number" id="Platelets_mean" name="Platelets_mean" step="any" required><br>
+
+        <label for="Age_mean"> Age:</label>
+        <input type="number" id="Age_mean" name="Age_mean" required><br>
+
+        <label for="Gender_first"> Gender(enter 0 for females and 1 for males):</label>
+        <input type="number" id="Gender_first" name="Gender_first" required><br>
+
+        <label for="HospAdmTime_first"> HospAdmTime_first:</label>
+        <input type="number" id="HospAdmTime_first" name="HospAdmTime_first" step="any" required><br>
+
+        <label for="ICULOS_max"> ICULOS_max:</label>
+        <input type="number" id="ICULOS_max" name="ICULOS_max" step="any" required><br>
+
+
+        <button type="submit">Predict Sepsis Risk</button>
+    </form>
+</body>
+</html>
